@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E0351CEA2308E9F700484334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351CE92308E9F700484334 /* AppDelegate.swift */; };
-		E0351CEC2308E9F700484334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351CEB2308E9F700484334 /* ViewController.swift */; };
+		E0351CEC2308E9F700484334 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351CEB2308E9F700484334 /* MainViewController.swift */; };
 		E0351CEF2308E9F700484334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0351CED2308E9F700484334 /* Main.storyboard */; };
 		E0351CF12308E9F800484334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0351CF02308E9F800484334 /* Assets.xcassets */; };
 		E0351CF42308E9F800484334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0351CF22308E9F800484334 /* LaunchScreen.storyboard */; };
+		E0351CFF2309A69900484334 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351CFE2309A69900484334 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E0351CE62308E9F700484334 /* FindTheBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindTheBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0351CE92308E9F700484334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0351CEB2308E9F700484334 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0351CEB2308E9F700484334 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E0351CEE2308E9F700484334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0351CF02308E9F800484334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0351CF32308E9F800484334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0351CF52308E9F800484334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0351CFE2309A69900484334 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		E0351CE82308E9F700484334 /* FindTheBook */ = {
 			isa = PBXGroup;
 			children = (
+				E0351CFD2309A64700484334 /* Controller */,
+				E0351CFC2309A63A00484334 /* Model */,
+				E0351CFB2309A63400484334 /* View */,
 				E0351CE92308E9F700484334 /* AppDelegate.swift */,
-				E0351CEB2308E9F700484334 /* ViewController.swift */,
 				E0351CED2308E9F700484334 /* Main.storyboard */,
 				E0351CF02308E9F800484334 /* Assets.xcassets */,
 				E0351CF22308E9F800484334 /* LaunchScreen.storyboard */,
 				E0351CF52308E9F800484334 /* Info.plist */,
 			);
 			path = FindTheBook;
+			sourceTree = "<group>";
+		};
+		E0351CFB2309A63400484334 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0351CFE2309A69900484334 /* TextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0351CFC2309A63A00484334 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E0351CFD2309A64700484334 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E0351CEB2308E9F700484334 /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0351CEC2308E9F700484334 /* ViewController.swift in Sources */,
+				E0351CFF2309A69900484334 /* TextField.swift in Sources */,
+				E0351CEC2308E9F700484334 /* MainViewController.swift in Sources */,
 				E0351CEA2308E9F700484334 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
