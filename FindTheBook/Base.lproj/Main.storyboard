@@ -45,6 +45,9 @@
                                             <constraint firstAttribute="width" constant="36" id="gAH-Mn-2JT"/>
                                         </constraints>
                                         <state key="normal" image="search" backgroundImage="search"/>
+                                        <connections>
+                                            <action selector="btnSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0m5-8U-Ty1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -103,11 +106,13 @@
                     </view>
                     <connections>
                         <outlet property="booksTableView" destination="GVg-Es-9rw" id="CKm-28-dTe"/>
+                        <outlet property="lblQuerySearch" destination="g8s-NG-k8S" id="Q4y-Ug-Oke"/>
+                        <outlet property="txtSeach" destination="TUr-Ba-PaE" id="s1c-hB-bGL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+            <point key="canvasLocation" x="-58" y="129"/>
         </scene>
         <!--Book View Controller-->
         <scene sceneID="Tgu-cb-Ild">
@@ -143,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="voD-Tb-pcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892.75362318840587" y="128.57142857142856"/>
+            <point key="canvasLocation" x="833" y="129"/>
         </scene>
     </scenes>
     <resources>

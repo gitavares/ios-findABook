@@ -11,12 +11,28 @@ import UIKit
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var booksTableView: UITableView!
+    @IBOutlet weak var txtSeach: TextField!
+    @IBOutlet weak var lblQuerySearch: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         booksTableView.dataSource = self
         booksTableView.delegate = self
+    }
+    
+    @IBAction func btnSearch(_ sender: UIButton) {
+        lblQuerySearch.text = "Result for: \(String(describing: txtSeach.text!))"
+        BookServiceAPI.shared.fetchBooks(from: txtSeach.text!) { (result: Result<BookResponse, BookServiceAPI.APIServiceError>) in
+            
+            print(result)
+            switch result {
+                case .success(let bookResponse):
+                    print(bookResponse.results)
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,7 +63,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let bookVC = segue.destination as? BookViewController{
-//            let
+            
         }
     }
 
@@ -61,7 +77,6 @@ extension UITableView {
         messageLabel.numberOfLines = 3
         messageLabel.textAlignment = .center
         messageLabel.font = UIFont(name: "Avenir Book", size: 17.0)
-//        messageLabel.sizeToFit()
         
         self.backgroundView = messageLabel
         self.separatorStyle = .none

@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Book {
+struct BookResponse: Codable {
+    public var results: [Book]
+}
+
+struct Book: Codable {
     private(set) public var title: String
     private(set) public var subtitle: String
     private(set) public var authors: [String]

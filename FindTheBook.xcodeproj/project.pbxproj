@@ -17,6 +17,7 @@
 		E0351D042309DD8200484334 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D032309DD8200484334 /* DataService.swift */; };
 		E0351D062309E0AE00484334 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D052309E0AE00484334 /* BookViewController.swift */; };
 		E0351D082309E23800484334 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D072309E23800484334 /* BookTableViewCell.swift */; };
+		E0351D0A2309F2E900484334 /* BookServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D092309F2E900484334 /* BookServiceAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E0351D032309DD8200484334 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		E0351D052309E0AE00484334 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		E0351D072309E23800484334 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		E0351D092309F2E900484334 /* BookServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E0351D032309DD8200484334 /* DataService.swift */,
+				E0351D092309F2E900484334 /* BookServiceAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				E0351CEC2308E9F700484334 /* MainViewController.swift in Sources */,
 				E0351D082309E23800484334 /* BookTableViewCell.swift in Sources */,
 				E0351D062309E0AE00484334 /* BookViewController.swift in Sources */,
+				E0351D0A2309F2E900484334 /* BookServiceAPI.swift in Sources */,
 				E0351CEA2308E9F700484334 /* AppDelegate.swift in Sources */,
 				E0351D042309DD8200484334 /* DataService.swift in Sources */,
 			);
