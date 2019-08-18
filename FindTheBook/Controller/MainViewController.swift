@@ -8,13 +8,68 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var booksTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        booksTableView.dataSource = self
+        booksTableView.delegate = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if DataService.instance.getBooks().count == 0 {
+            self.booksTableView.setEmptyMessage()
+        } else {
+            self.booksTableView.restore()
+        }
+
+        return DataService.instance.getBooks().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableViewCell") as? BookTableViewCell {
+            let book = DataService.instance.getBooks()[indexPath.row]
+            cell.updateViews(book: book)
+            
+            return cell
+        } else {
+            return BookTableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = DataService.instance.getBooks()[indexPath.row]
+        performSegue(withIdentifier: "bookVC", sender: book)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let bookVC = segue.destination as? BookViewController{
+//            let
+        }
     }
 
+}
 
+extension UITableView {
+    func setEmptyMessage() {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width/2, height: self.bounds.size.height))
+        messageLabel.text = "Search for a book by \nthe title, keywords, author, \netc."
+        messageLabel.textColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+        messageLabel.numberOfLines = 3
+        messageLabel.textAlignment = .center
+        messageLabel.font = UIFont(name: "Avenir Book", size: 17.0)
+//        messageLabel.sizeToFit()
+        
+        self.backgroundView = messageLabel
+        self.separatorStyle = .none
+    }
+    
+    func restore(){
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
+    }
 }
 

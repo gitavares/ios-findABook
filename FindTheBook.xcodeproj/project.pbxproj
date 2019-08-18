@@ -13,6 +13,10 @@
 		E0351CF12308E9F800484334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0351CF02308E9F800484334 /* Assets.xcassets */; };
 		E0351CF42308E9F800484334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0351CF22308E9F800484334 /* LaunchScreen.storyboard */; };
 		E0351CFF2309A69900484334 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351CFE2309A69900484334 /* TextField.swift */; };
+		E0351D012309D42500484334 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D002309D42500484334 /* Book.swift */; };
+		E0351D042309DD8200484334 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D032309DD8200484334 /* DataService.swift */; };
+		E0351D062309E0AE00484334 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D052309E0AE00484334 /* BookViewController.swift */; };
+		E0351D082309E23800484334 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D072309E23800484334 /* BookTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E0351CF32308E9F800484334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0351CF52308E9F800484334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0351CFE2309A69900484334 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		E0351D002309D42500484334 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		E0351D032309DD8200484334 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E0351D052309E0AE00484334 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		E0351D072309E23800484334 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		E0351CE82308E9F700484334 /* FindTheBook */ = {
 			isa = PBXGroup;
 			children = (
+				E0351D022309DD6E00484334 /* Services */,
 				E0351CFD2309A64700484334 /* Controller */,
 				E0351CFC2309A63A00484334 /* Model */,
 				E0351CFB2309A63400484334 /* View */,
@@ -72,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				E0351CFE2309A69900484334 /* TextField.swift */,
+				E0351D072309E23800484334 /* BookTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -79,6 +89,7 @@
 		E0351CFC2309A63A00484334 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E0351D002309D42500484334 /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,8 +98,17 @@
 			isa = PBXGroup;
 			children = (
 				E0351CEB2308E9F700484334 /* MainViewController.swift */,
+				E0351D052309E0AE00484334 /* BookViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E0351D022309DD6E00484334 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E0351D032309DD8200484334 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0351D012309D42500484334 /* Book.swift in Sources */,
 				E0351CFF2309A69900484334 /* TextField.swift in Sources */,
 				E0351CEC2308E9F700484334 /* MainViewController.swift in Sources */,
+				E0351D082309E23800484334 /* BookTableViewCell.swift in Sources */,
+				E0351D062309E0AE00484334 /* BookViewController.swift in Sources */,
 				E0351CEA2308E9F700484334 /* AppDelegate.swift in Sources */,
+				E0351D042309DD8200484334 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

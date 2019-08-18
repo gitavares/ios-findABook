@@ -18,16 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for a book by the title, keywords, author, etc." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atX-4r-N8x">
-                                <rect key="frame" x="111" y="402" width="192" height="92"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="0UO-sb-CwD"/>
-                                    <constraint firstAttribute="width" constant="192" id="Qet-Q0-rpt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7df-2u-yp0">
                                 <rect key="frame" x="21.5" y="55" width="371" height="38"/>
                                 <subviews>
@@ -54,27 +44,110 @@
                                             <constraint firstAttribute="height" constant="36" id="fG0-cA-Gc1"/>
                                             <constraint firstAttribute="width" constant="36" id="gAH-Mn-2JT"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="search"/>
+                                        <state key="normal" image="search" backgroundImage="search"/>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result for: QUERY" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8s-NG-k8S">
+                                <rect key="frame" x="20" y="119" width="374" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="143" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GVg-Es-9rw">
+                                <rect key="frame" x="0.0" y="150" width="414" height="746"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" rowHeight="143" id="2Ma-sm-4A4" customClass="BookTableViewCell" customModule="FindTheBook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Ma-sm-4A4" id="zSb-Q4-5c4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="142.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZZY-wW-AK9">
+                                                    <rect key="frame" x="20" y="7" width="95" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Book name " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avx-91-pHw">
+                                                    <rect key="frame" x="132" y="7" width="262" height="49"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookImage" destination="ZZY-wW-AK9" id="tyE-Or-3ea"/>
+                                            <outlet property="bookName" destination="avx-91-pHw" id="KcC-Bh-whF"/>
+                                            <segue destination="kOw-ES-27T" kind="show" identifier="bookVC" id="454-zX-xkZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GVg-Es-9rw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8nb-8a-UjA"/>
                             <constraint firstItem="7df-2u-yp0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CIj-ca-h2Y"/>
+                            <constraint firstItem="g8s-NG-k8S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FVm-QW-pVH"/>
                             <constraint firstItem="7df-2u-yp0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="GWL-Rn-WDu"/>
-                            <constraint firstItem="atX-4r-N8x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f0K-wa-u4q"/>
-                            <constraint firstItem="atX-4r-N8x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nUh-uZ-giz"/>
+                            <constraint firstAttribute="bottom" secondItem="GVg-Es-9rw" secondAttribute="bottom" id="IZy-Ml-8U8"/>
+                            <constraint firstItem="GVg-Es-9rw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JhX-Xt-1aJ"/>
+                            <constraint firstItem="g8s-NG-k8S" firstAttribute="top" secondItem="7df-2u-yp0" secondAttribute="bottom" constant="26" id="bWs-jo-eDH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g8s-NG-k8S" secondAttribute="trailing" constant="20" id="nKf-0N-VzP"/>
+                            <constraint firstItem="GVg-Es-9rw" firstAttribute="top" secondItem="g8s-NG-k8S" secondAttribute="bottom" constant="7.5" id="vie-qX-quG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="booksTableView" destination="GVg-Es-9rw" id="CKm-28-dTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </scene>
+        <!--Book View Controller-->
+        <scene sceneID="Tgu-cb-Ild">
+            <objects>
+                <viewController id="kOw-ES-27T" customClass="BookViewController" customModule="FindTheBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SjB-KL-dxh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRL-q8-mtH">
+                                <rect key="frame" x="20" y="55" width="41" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="searchBooksVC" id="1kr-IY-BYl"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A80-fX-2Mc">
+                                <rect key="frame" x="115" y="117" width="184" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Book name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2H-1D-yRo">
+                                <rect key="frame" x="20" y="386" width="374" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qve-pc-etZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voD-Tb-pcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="128.57142857142856"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="back" width="12.5" height="12.5"/>
         <image name="books" width="13" height="13"/>
         <image name="search" width="12" height="12"/>
     </resources>
