@@ -8,34 +8,31 @@
 
 import Foundation
 
-struct BookResponse: Codable {
-    public var results: [Book]
+struct Volume: Decodable {
+    let kind: String?
+    let totalItems: Int?
+    let items: [Item]?
 }
 
-struct Book: Codable {
-    private(set) public var title: String
-    private(set) public var subtitle: String
-    private(set) public var authors: [String]
-    private(set) public var publisher: String
-    private(set) public var publishedDate: String
-    private(set) public var description: String
-    private(set) public var pageCount: Int
-    private(set) public var categories: [String]
-    private(set) public var thumbnail: String
-    private(set) public var infoLink: String
-    
-    init(title: String, subtitle: String, authors: [String], publisher: String, publishedDate: String, description: String, pageCount: Int, categories: [String], thumbnail: String, infoLink: String) {
-        
-        self.title = title
-        self.subtitle = subtitle
-        self.authors = authors
-        self.publisher = publisher
-        self.publishedDate = publishedDate
-        self.description = description
-        self.pageCount = pageCount
-        self.categories = categories
-        self.thumbnail = thumbnail
-        self.infoLink = infoLink
-    }
+struct Item: Decodable {
+    let kind: String?
+    let id: String?
+    let etag: String?
+    let selflink: String?
+    let volumeInfo: Book?
+}
+
+struct Book: Decodable {
+    let id: String?
+    let title: String?
+    let subtitle: String?
+    let authors: [String]?
+    let publisher: String?
+    let publishedDate: String?
+    let description: String?
+    let pageCount: Int?
+    let categories: [String]?
+    let thumbnail: String?
+    let infoLink: String?
     
 }

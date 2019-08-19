@@ -19,20 +19,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         booksTableView.dataSource = self
         booksTableView.delegate = self
+        
     }
     
     @IBAction func btnSearch(_ sender: UIButton) {
         lblQuerySearch.text = "Result for: \(String(describing: txtSeach.text!))"
-        BookServiceAPI.shared.fetchBooks(from: txtSeach.text!) { (result: Result<BookResponse, BookServiceAPI.APIServiceError>) in
-            
-            print(result)
-            switch result {
-                case .success(let bookResponse):
-                    print(bookResponse.results)
-                case .failure(let error):
-                    print(error.localizedDescription)
-            }
-        }
+        BookServiceAPI.shared.fetchTheBooks(from: txtSeach.text!)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,7 +33,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             self.booksTableView.restore()
         }
-
         return DataService.instance.getBooks().count
     }
     

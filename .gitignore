@@ -78,5 +78,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+Keys.plist
 
 # End of https://www.gitignore.io/api/swift

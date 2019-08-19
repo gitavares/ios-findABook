@@ -14,7 +14,7 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var bookName: UILabel!
     
     func updateViews(book: Book){
-        bookImage.image = UIImage(named: book.thumbnail)
+        bookImage.image = UIImage(named: book.thumbnail!)
         bookName.text = book.title
     }
 

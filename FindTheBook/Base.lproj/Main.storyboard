@@ -44,7 +44,7 @@
                                             <constraint firstAttribute="height" constant="36" id="fG0-cA-Gc1"/>
                                             <constraint firstAttribute="width" constant="36" id="gAH-Mn-2JT"/>
                                         </constraints>
-                                        <state key="normal" image="search" backgroundImage="search"/>
+                                        <state key="normal" backgroundImage="search"/>
                                         <connections>
                                             <action selector="btnSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0m5-8U-Ty1"/>
                                         </connections>

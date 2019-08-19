@@ -18,6 +18,7 @@
 		E0351D062309E0AE00484334 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D052309E0AE00484334 /* BookViewController.swift */; };
 		E0351D082309E23800484334 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D072309E23800484334 /* BookTableViewCell.swift */; };
 		E0351D0A2309F2E900484334 /* BookServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351D092309F2E900484334 /* BookServiceAPI.swift */; };
+		E0351D0E230A158400484334 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0351D0D230A158400484334 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E0351D052309E0AE00484334 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		E0351D072309E23800484334 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		E0351D092309F2E900484334 /* BookServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceAPI.swift; sourceTree = "<group>"; };
+		E0351D0D230A158400484334 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				E0351CF02308E9F800484334 /* Assets.xcassets */,
 				E0351CF22308E9F800484334 /* LaunchScreen.storyboard */,
 				E0351CF52308E9F800484334 /* Info.plist */,
+				E0351D0D230A158400484334 /* Keys.plist */,
 			);
 			path = FindTheBook;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0351D0E230A158400484334 /* Keys.plist in Resources */,
 				E0351CF42308E9F800484334 /* LaunchScreen.storyboard in Resources */,
 				E0351CF12308E9F800484334 /* Assets.xcassets in Resources */,
 				E0351CEF2308E9F700484334 /* Main.storyboard in Resources */,
